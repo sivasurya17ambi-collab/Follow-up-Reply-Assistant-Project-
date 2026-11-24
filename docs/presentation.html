@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow-up Reply Assistant (PRJ-042) - Presentation Slides</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .slide-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            max-width: 1100px;
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+            border: 1px solid #334155;
+            min-height: 580px;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-header {
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        .slide-header h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .slide-header .tag {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            font-size: 13px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .slide-content {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+        .slide-content ul {
+            margin-left: 24px;
+            margin-top: 16px;
+        }
+        .slide-content li {
+            margin-bottom: 12px;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card h3 {
+            color: #60a5fa;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+        .speaker-notes {
+            margin-top: 20px;
+            background: #1e3a5f;
+            border-left: 4px solid #38bdf8;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            color: #e0f2fe;
+        }
+        .navigation {
+            background: #0b1120;
+            border-top: 1px solid #1e293b;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #1d4ed8; }
+        .counter { font-size: 15px; color: #94a3b8; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <div class="slide-header">
+            <span class="tag">PRJ-042</span>
+            <h1 style="font-size: 38px; margin-top: 10px;">Follow-up Reply Assistant</h1>
+            <p style="color: #94a3b8; font-size: 18px;">GenAI-Powered Email Drafts & Action Item Extraction</p>
+        </div>
+        <div class="slide-content">
+            <div class="card" style="margin-top: 30px; padding: 24px;">
+                <h3 style="color: #38bdf8;">Student & Academic Credentials</h3>
+                <ul style="list-style: none; margin-left: 0; margin-top: 12px; font-size: 17px;">
+                    <li><strong>Student Name:</strong> SIVASURYA.B</li>
+                    <li><strong>Register Number:</strong> 411723205052</li>
+                    <li><strong>Department:</strong> Information Technology (IT) | PSVPEC</li>
+                    <li><strong>Project Code:</strong> PRJ-042 | Category: Email and Reply Assistants</li>
+                    <li><strong>Recommended Stack:</strong> FastAPI + LangChain + Streamlit + Chroma</li>
+                    <li><strong>Evaluation Score Target:</strong> 45 / 45 Marks</li>
+                </ul>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue (0:00 - 0:25):</strong> "Good morning evaluators. My name is Sivasurya B (411723205052) from the IT Department. Today I present PRJ-042: The Follow-up Reply Assistant."
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Problem Statement</span>
+            <h1>The Business Communication Challenge</h1>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Manual Overhead</h3>
+                    <p>Sales reps and engineering leads spend 20%+ of their day deciphering meeting notes and hand-crafting follow-up emails.</p>
+                </div>
+                <div class="card">
+                    <h3>Dropped Action Items</h3>
+                    <p>Critical commitments (deliverable dates, security packs, quote revisions) are frequently forgotten or lost in transition.</p>
+                </div>
+                <div class="card">
+                    <h3>Tone Misalignment</h3>
+                    <p>Difficulty adapting language between formal C-suite executive summaries and persuasive sales re-engagement.</p>
+                </div>
+                <div class="card">
+                    <h3>Lack of Audit & Citations</h3>
+                    <p>Raw LLMs hallucinate context without grounding or transparent source citations back to the meeting transcript.</p>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue (0:25 - 0:50):</strong> "Writing follow-up emails manually takes hours and leads to missed deadlines. Our assistant automates this with RAG grounding."
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">System Design</span>
+            <h1>Three-Tier Architecture</h1>
+        </div>
+        <div class="slide-content">
+            <div class="card">
+                <h3>Decoupled Full-Stack Architecture</h3>
+                <ul>
+                    <li><strong>Frontend (Streamlit):</strong> Executive multi-tab interface with live interactive draft editor and one-click quick loads.</li>
+                    <li><strong>Backend API (FastAPI):</strong> High-performance async REST endpoints with Pydantic V2 data validation and Swagger documentation.</li>
+                    <li><strong>RAG Intelligence (Chroma & LangChain):</strong> Hierarchical text chunker (400 chars, 80 overlap) and deterministic dense embeddings for 100% offline stability.</li>
+                    <li><strong>Export Service:</strong> Generates Plain Text, Markdown, HTML, RFC 822 Outlook `.eml`, and JSON.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue (0:50 - 1:15):</strong> "Our solution separates the Streamlit UI from a robust FastAPI REST backend, connecting to an offline-capable Chroma vector store."
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Milestone 1</span>
+            <h1>Week 1: Knowledge Base & Ingestion</h1>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Implementation (10 Marks)</h3>
+                    <ul>
+                        <li>Parser for .txt, .md, .json, and .csv files.</li>
+                        <li>Automated metadata extraction (meeting title, dates, attendees).</li>
+                        <li>Hierarchical chunking preserving sentence boundaries.</li>
+                        <li>Chroma persistent collection indexing.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Testing Plan (5 Marks)</h3>
+                    <ul>
+                        <li>Validated chunk ID generation and overlap.</li>
+                        <li>Verified 4 built-in sample meeting datasets indexed.</li>
+                        <li>Baseline question-answer vector similarity testing.</li>
+                        <li>Unit test pass rate: 100%.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "In Week 1, we implemented the DocumentParser and Chroma vector store, indexing meeting notes into persistent chunks."
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Milestone 2</span>
+            <h1>Week 2: Retrieval, Presets & Citations</h1>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Implementation (10 Marks)</h3>
+                    <ul>
+                        <li>Semantic vector retrieval with normalized relevance scores.</li>
+                        <li>6 distinct tone presets (Professional, Friendly, Urgent, Executive, Sales, Re-engagement).</li>
+                        <li>Automatic source citation attribution in drafts.</li>
+                        <li>Admin refresh workflow with X-Admin-Key protection.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Testing Plan (5 Marks)</h3>
+                    <ul>
+                        <li>Tested retrieval relevance on Acme ERP queries.</li>
+                        <li>Verified tone variance across all 6 presets.</li>
+                        <li>Edge case queries (empty queries, missing attendees).</li>
+                        <li>Fallback context handling validated.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "In Week 2, we engineered prompt tuning with 6 tone presets, source citation verification, and administrative refresh."
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Milestone 3</span>
+            <h1>Week 3: UX, Export & Final Verification</h1>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Implementation (10 Marks)</h3>
+                    <ul>
+                        <li>Interactive draft editor with live word count and reading time.</li>
+                        <li>Smart reply suggestion action chips (schedule, quote, unblock).</li>
+                        <li>Multi-format export: Plain Text, Markdown, HTML, RFC 822 EML, JSON.</li>
+                        <li>Session audit trail and tone usage telemetry.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Testing Plan (5 Marks)</h3>
+                    <ul>
+                        <li>End-to-end FastAPI endpoint integration tests.</li>
+                        <li>Export format integrity tests (validated EML & HTML).</li>
+                        <li>Access control authorization tests (401 vs 200).</li>
+                        <li>Total 15 automated pytest tests passing in 1.37s.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "In Week 3, we built the executive Streamlit UI, multi-format export, and session audit history."
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Key Feature</span>
+            <h1>Multi-Format Export & Outlook EML</h1>
+        </div>
+        <div class="slide-content">
+            <div class="card">
+                <h3>One-Click Send Readiness</h3>
+                <p>Unlike basic AI chat tools that leave text in a window, PRJ-042 exports to:</p>
+                <ul>
+                    <li><strong>RFC 822 Outlook EML:</strong> Double-clicking opens directly in Microsoft Outlook or Apple Mail with recipient and subject pre-filled.</li>
+                    <li><strong>Responsive HTML Email:</strong> Beautifully formatted with gradient headers and styled bullet points.</li>
+                    <li><strong>GitHub Markdown:</strong> Clean markdown for team wiki and documentation logs.</li>
+                    <li><strong>Structured JSON:</strong> Instant integration with CRM/ERP pipelines.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "Our Outlook EML export generates native email files that open directly in Outlook with pre-filled headers."
+        </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Live Demo</span>
+            <h1>Real-World Business Scenarios Tested</h1>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Acme Global Sales Call</h3>
+                    <p>Ingested 250-seat discovery call. Successfully drafted proposal email handling SOC2 security concerns and scheduling next demo.</p>
+                </div>
+                <div class="card">
+                    <h3>Q3 Product Roadmap Sync</h3>
+                    <p>Extracted microservices migration status, latency milestones, and escalated payment gateway documentation blocker.</p>
+                </div>
+                <div class="card">
+                    <h3>Nexus Financial Onboarding</h3>
+                    <p>Drafted timeline adjustment recap and confirmed webhook serialization patch verification sync.</p>
+                </div>
+                <div class="card">
+                    <h3>Vertex Media Contract Renewal</h3>
+                    <p>Summarized 99.98% platform uptime and presented early 10% discount renewal options for CFO review.</p>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "We validated our assistant against enterprise sales calls, technical engineering syncs, customer onboarding, and contract renewals."
+        </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Validation</span>
+            <h1>Automated Pytest Results (15/15 Passed)</h1>
+        </div>
+        <div class="slide-content">
+            <div class="card" style="font-family: monospace; font-size: 14px; background: #0b1120;">
+                <p style="color: #4ade80;">tests/test_week1_kb.py::test_document_parser_text_and_metadata PASSED [ 6%]</p>
+                <p style="color: #4ade80;">tests/test_week1_kb.py::test_document_parser_chunking_and_overlap PASSED [13%]</p>
+                <p style="color: #4ade80;">tests/test_week1_kb.py::test_sample_documents_indexed_in_chroma PASSED [20%]</p>
+                <p style="color: #4ade80;">tests/test_week1_kb.py::test_baseline_vector_query PASSED [26%]</p>
+                <p style="color: #4ade80;">tests/test_week2_retrieval.py::test_answer_relevance_and_citation_correctness PASSED [33%]</p>
+                <p style="color: #4ade80;">tests/test_week2_retrieval.py::test_all_six_tone_presets_generate_distinct_content PASSED [40%]</p>
+                <p style="color: #4ade80;">tests/test_week2_retrieval.py::test_template_library_substitution PASSED [46%]</p>
+                <p style="color: #4ade80;">tests/test_week2_retrieval.py::test_edge_queries_and_fallback_handling PASSED [53%]</p>
+                <p style="color: #4ade80;">tests/test_week2_retrieval.py::test_reply_suggester_intents PASSED [60%]</p>
+                <p style="color: #4ade80;">tests/test_week3_e2e.py::test_api_health_endpoint PASSED [66%]</p>
+                <p style="color: #4ade80;">tests/test_week3_e2e.py::test_api_document_lifecycle PASSED [73%]</p>
+                <p style="color: #4ade80;">tests/test_week3_e2e.py::test_api_draft_generation_with_rag PASSED [80%]</p>
+                <p style="color: #4ade80;">tests/test_week3_e2e.py::test_api_export_all_formats PASSED [86%]</p>
+                <p style="color: #4ade80;">tests/test_week3_e2e.py::test_access_control_admin_refresh PASSED [93%]</p>
+                <p style="color: #4ade80;">tests/test_week3_e2e.py::test_history_and_analytics_logging PASSED [100%]</p>
+                <p style="color: #60a5fa; margin-top: 10px;">======================== 15 passed in 1.37s ========================</p>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "Our automated test suite achieves a 100% pass rate in 1.37 seconds, validating every layer of the architecture."
+        </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span class="tag">Conclusion</span>
+            <h1>Project Summary & Submission Deliverables</h1>
+        </div>
+        <div class="slide-content">
+            <div class="card">
+                <h3>Final Submission Deliverables Complete</h3>
+                <ul>
+                    <li>✅ <strong>Full Working Application:</strong> FastAPI Backend + Streamlit UI + Chroma RAG.</li>
+                    <li>✅ <strong>Git Version Control:</strong> Clean progressive commits matching 3-week milestones.</li>
+                    <li>✅ <strong>Comprehensive Test Suite:</strong> 15 automated pytest test cases passing (100%).</li>
+                    <li>✅ <strong>Documentation & Reports:</strong> Academic Report, PPT Deck, Viva Guide, Screenshots Guide.</li>
+                    <li>✅ <strong>One-Click Launchers:</strong> `start_app.bat` and `start_backend.bat`.</li>
+                    <li>🎯 <strong>Target Score:</strong> 45 / 45 Marks.</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <h2 style="color: #38bdf8;">Thank You!</h2>
+                    <p style="color: #94a3b8; margin-top: 6px;">SIVASURYA.B (411723205052) &bull; Department of Information Technology</p>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-notes">
+            <strong>Speaker Cue:</strong> "In conclusion, PRJ-042 delivers an intelligent, fully verified GenAI reply assistant. Thank you for your time!"
+        </div>
+    </div>
+
+</div>
+
+<!-- Navigation Controls -->
+<div class="navigation">
+    <button class="btn" id="prevBtn" onclick="changeSlide(-1)">◀ Previous</button>
+    <div class="counter" id="slideCounter">Slide 1 of 10</div>
+    <button class="btn" id="nextBtn" onclick="changeSlide(1)">Next ▶</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('slideCounter');
+
+    function showSlide(index) {
+        slides.forEach((slide, idx) => {
+            slide.classList.remove('active');
+            if (idx === index) slide.classList.add('active');
+        });
+        counter.textContent = `Slide ${index + 1} of ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>
