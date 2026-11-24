@@ -1,0 +1,90 @@
+[
+  {
+    "id": "tpl_post_meeting",
+    "name": "Post-Meeting Minutes & Action Items",
+    "category": "Meeting Recap",
+    "description": "Comprehensive follow-up summarizing meeting discussion, agreed decisions, individual responsibilities, and deadlines.",
+    "subject_template": "Follow-up & Action Items: {meeting_title} - {date}",
+    "default_tone": "Professional",
+    "structure": [
+      "Appreciation for time and participation",
+      "Executive summary of core discussion points",
+      "Action items table with owner and deadline",
+      "Upcoming milestone / next sync date",
+      "Polite closing and invitation for clarifications"
+    ]
+  },
+  {
+    "id": "tpl_sales_discovery",
+    "name": "Sales Discovery Follow-up & Next Steps",
+    "category": "Sales & Leads",
+    "description": "Engaging sales follow-up addressing customer pain points, confirming requirements, and proposing next demo or proposal review.",
+    "subject_template": "Next steps from our discussion | {client_name} & {company_name}",
+    "default_tone": "Persuasive / Sales",
+    "structure": [
+      "Thanking lead for sharing challenges and goals",
+      "Recap of key challenges identified (pain points)",
+      "How our proposed solution fits their timeline and scale",
+      "Agreed next milestone (demo / proposal review)",
+      "Direct call-to-action for scheduling"
+    ]
+  },
+  {
+    "id": "tpl_gentle_nudge",
+    "name": "Gentle Follow-up Nudge / Pending Decision",
+    "category": "Lead Re-engagement",
+    "description": "Courteous, polite check-in when a client or lead hasn't responded to a previous proposal or inquiry.",
+    "subject_template": "Quick check-in regarding {topic} | {client_name}",
+    "default_tone": "Polite Re-engagement",
+    "structure": [
+      "Friendly, non-intrusive greeting",
+      "Reference to previous conversation / proposal sent",
+      "Highlighting key value or answering potential pending questions",
+      "Low-friction call to action (e.g. quick 5-min call or reply)",
+      "Warm closing"
+    ]
+  },
+  {
+    "id": "tpl_project_milestone",
+    "name": "Project Milestone & Status Update",
+    "category": "Client Management",
+    "description": "Structured project status update highlighting completed deliverables, current blockers, and upcoming milestones.",
+    "subject_template": "Project Update: {project_name} - Status & Next Milestones",
+    "default_tone": "Executive / Concise",
+    "structure": [
+      "Overall health status (Green/Amber/Red)",
+      "Key accomplishments achieved this period",
+      "Open blockers and mitigation steps",
+      "Target dates for next deliverable sign-offs"
+    ]
+  },
+  {
+    "id": "tpl_contract_renewal",
+    "name": "Contract Renewal & Executive Review",
+    "category": "Account Management",
+    "description": "Professional renewal proposal recapping past value delivered, current options, and early sign-off incentives.",
+    "subject_template": "Partnership Renewal & Next Steps - {company_name}",
+    "default_tone": "Professional",
+    "structure": [
+      "Review of annual achievements and value delivered",
+      "Outline of renewal package and expansion opportunities",
+      "Special incentives / timeline details",
+      "Meeting request to finalize paperwork"
+    ]
+  },
+  {
+    "id": "tpl_urgent_action",
+    "name": "Urgent Action Required / Blocker Escalation",
+    "category": "Critical Communication",
+    "description": "Direct, clear escalation when missing inputs or approvals are blocking a critical delivery deadline.",
+    "subject_template": "URGENT: Input required for {project_name} delivery deadline",
+    "default_tone": "Urgent / Action-Oriented",
+    "structure": [
+      "Clear immediate statement of the blocker",
+      "Impact on the launch date / milestone",
+      "Exact action required from recipient",
+      "Deadline by which resolution is necessary",
+      "Contact information for immediate sync"
+    ]
+  }
+]
