@@ -11,7 +11,7 @@
 **Register Number:** 411723205052  
 **Department:** Information Technology (IT)  
 **Institution:** PSVPEC  
-**Email:** `sivasurya.b.27.it@psvpec.in`  
+**Email:**`sivasurya17ambi@gmail.com`
 **Total Marks:** 45 / 45 Marks  
 
 ---
