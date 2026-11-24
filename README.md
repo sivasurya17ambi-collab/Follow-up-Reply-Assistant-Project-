@@ -13,7 +13,7 @@
 | **Register Number** | **411723205052** |
 | **Institution** | **PSVPEC** |
 | **Department** | **Information Technology (IT)** |
-| **Email** | `sivasurya.b.27.it@psvpec.in` |
+| **Email** | `sivasurya17ambi@gmail.com`|
 | **Serial Number** | **242** |
 | **Project Code** | **PRJ-042** |
 | **Project Name** | **Follow-up Reply Assistant** |
