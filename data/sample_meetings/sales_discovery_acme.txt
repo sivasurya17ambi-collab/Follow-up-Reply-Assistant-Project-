@@ -1,0 +1,19 @@
+Meeting Title: Sales Discovery Call - Acme Global Logistics
+Date: November 05, 2026
+Attendees: Marcus Vance (Enterprise Account Executive, Our Team), Elena Rostova (VP Supply Chain, Acme Global), Thomas Sterling (IT Security Director, Acme Global)
+Lead Stage: Qualified Discovery / Solution Fit
+
+Call Highlights & Customer Needs:
+- Acme Global is experiencing manual data entry bottlenecks across 14 regional distribution warehouses, leading to estimated 12 hours/week loss per warehouse manager.
+- Current ERP: Legacy SAP R/3 system. They require seamless bi-directional REST API integration and SSO support (Okta / SAML 2.0).
+- Scale: Initial rollout for 250 enterprise seats, with potential expansion to 1,200 seats globally across APAC and EMEA next fiscal year.
+- Budget: Elena confirmed an allocated annual innovation budget of $120,000 - $150,000 for automation tooling.
+- Security Requirements: Thomas Sterling emphasized SOC2 Type II compliance, ISO 27001 certification, and data residency in US-East.
+
+Objections / Concerns:
+- Thomas is worried about training curve and migration downtime during peak holiday freight season.
+
+Agreed Next Steps:
+- Marcus: Deliver a customized enterprise proposal and ROI calculation model tailored to 250 seats by Friday, Nov 8.
+- Marcus: Share our SOC2 Type II compliance package and architecture security whitepaper with Thomas.
+- Elena: Coordinate internal team availability for a 45-minute live technical demo on Tuesday, Nov 12 at 2:00 PM EST.

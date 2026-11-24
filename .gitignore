@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Chroma / Vector DB
+data/chroma_db/
+*.sqlite3
+
+# Environment & Credentials
+.env
+.env.local
+*.key
+*.token
+
+# Logs & Cache
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+.streamlit/cache/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

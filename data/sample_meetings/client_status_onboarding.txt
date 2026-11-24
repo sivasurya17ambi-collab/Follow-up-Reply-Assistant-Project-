@@ -1,0 +1,18 @@
+Meeting Title: Customer Onboarding & Milestone Check-in - Nexus Financial
+Date: November 18, 2026
+Attendees: Chloe Bennet (Customer Success Manager), Nathan Drake (Head of Operations, Nexus Financial), Jessica Wu (Integration Engineer)
+Project Status: Amber (Minor delay in webhook validation)
+
+Key Updates:
+- Tenant provisioning completed successfully on AWS us-east-1.
+- Initial user provisioning: 45 operational analysts successfully onboarded and completed basic training modules.
+- Webhook discrepancy: Nexus Financial's staging server is rejecting JSON payloads with unexpected nested timestamp formats.
+
+Resolution Plan & Commitments:
+- Jessica Wu: Patched the webhook serialization parser today; test payload scheduled to be sent by 4:00 PM today.
+- Nathan Drake: Agrees to re-run end-to-end reconciliation tests once the updated webhook payload is received.
+- Chloe Bennet: Will provide revised onboarding timeline milestone document, shifting go-live target from Dec 1 to Dec 8 to ensure zero financial discrepancies.
+- Nathan requested a formal sign-off checklist document before the executive steering committee meets on Monday.
+
+Immediate Next Steps:
+- Chloe Bennet to send meeting recap email with updated timeline and sign-off checklist attachment by tomorrow morning.
