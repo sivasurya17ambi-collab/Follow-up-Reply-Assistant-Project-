@@ -1,6 +1,5 @@
 # ACADEMIC PROJECT REPORT
 
-## PROJECT CODE: PRJ-042
 ## PROJECT TITLE: FOLLOW-UP REPLY ASSISTANT
 ### Domain: Business | Category: Email and Reply Assistants | Focus: GenAI
 
@@ -12,8 +11,6 @@
 **Department:** Information Technology (IT)  
 **Institution:** PSVPEC  
 **Email:**`sivasurya17ambi@gmail.com`
-
-**Total Marks:** 45 / 45 Marks  
 
 ---
 
